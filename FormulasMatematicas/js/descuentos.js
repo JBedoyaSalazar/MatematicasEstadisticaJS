@@ -1,23 +1,47 @@
 const inputPrice = document.querySelector('#price')
-const inputDiscount = document.querySelector('#discount')
+const inputCoupon = document.querySelector('#coupon')
 const btn = document.querySelector('#calcular');
 const pResult = document.querySelector('#result')
 
 btn.addEventListener('click', calcularPrecioConDescuento);
 
+// const arrayUObjecto = undefined;
+
+const couponsObj = {
+    'FelizAniversario2025':30,
+    'ShutUp': 20,
+    'Happy New Year': 50,
+}
+
 function calcularPrecioConDescuento(){
 
     const price = Number(inputPrice.value);
-    const discount = Number(inputDiscount.value);
+    const coupon = inputCoupon.value;
 
-    if(!price || !discount){
+    if(!price || !coupon){
         pResult.innerHTML = 'Ingresa un valor en los campos marcados'
-    }else if(discount<100){
-        const newPrice = (price*(100-discount))/100;
-        pResult.innerHTML = 'El nuevo precio con descuento es $' + newPrice;
-    }else{
-        pResult.textContent = 'El valor ingresado en el descuento es mayor al permitido'
+        return;
     }
 
+    let discount;
+
+    if(){
+
+    }else{
+
+    }
+    
+    // if(coupon == 'FelizAniversario2025'){
+    //     discount = 30;
+    // }else if(coupon == 'ShutUp'){
+    //     discount = 20;
+    // }else{
+    //     pResult.innerHTML = 'El cupon ingresado <span style="color:#e0e6edce; color:rgba(224,230,237,.81); font-size:2.1rem;">NO ES VALIDO</span>';
+    //     return;
+    // }
+
+    const newPrice = (price * (100-discount))/100;
+
+    pResult.innerHTML = 'El nuevo precio es $'+newPrice
     
 }

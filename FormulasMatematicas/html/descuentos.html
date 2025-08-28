@@ -19,15 +19,14 @@
 
     <main class="descuentoPrincipal">
 
-        <label for="price">Precio Original del producto:
-            <input type="43.06$" id="price" type="number" placeholder="4.58">
-        </label>
+        <section class="grid">
+            <label for="price">Precio Original del producto:</label>
+             <input type="43.06$" id="price" type="number" placeholder="4.58">
 
-        <label for="discount">Escribe el descuento del producto:
-            <input type="25%" id="discount" type="number" placeholder="25%">
-        </label>
-        
-        
+            <label for="coupon">Cupon de descuento:</label>
+            <input type="25%" id="coupon" type="text" placeholder="25%">
+        </section>
+
         <button id="calcular" class="calcularDescuento">Calcular Descuento</button>
 
         <p id="result" class="result">Ingresa los valores para calcular</p>

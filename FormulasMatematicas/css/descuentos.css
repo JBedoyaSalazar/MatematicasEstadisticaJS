@@ -14,7 +14,7 @@
   /* Botón secundario */
   --color-secondary: #4b5563; /* Gris oscuro, discreto */
   --color-secondary-hover: #374151; /* Hover más intenso */
-  --color-secondary-text: #e0e6ed;
+  --color-secondary-text: #e0e6edce;
 
   /* Bordes y separadores */
   --color-border: #1f2937;
@@ -60,13 +60,29 @@ main{
     align-items: center;
 }
 
+main .grid{
+    display: grid;
+    grid-template-columns: 2 1fr;
+    grid-template-rows: 2 1fr;
+    grid-template-areas: 
+    'sideRight sideLeft'
+    'sideRight sideLeft';
+}
+
+main .grid input{
+    width: 120px;
+    height: 25px;
+    align-self: center;
+    border-radius: 8px;
+    padding-block: 6px;
+    padding-inline: 4px 12px; 
+}
+
 main label{
     margin: 12px;
 }
 
-main #price{
-    margin-left: 33px;
-}
+
 
 main button{
     margin-top: 25px;
