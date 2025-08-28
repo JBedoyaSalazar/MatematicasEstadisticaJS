@@ -7,11 +7,17 @@ btn.addEventListener('click', calcularPrecioConDescuento);
 
 // const arrayUObjecto = undefined;
 
-const couponsObj = {
-    'FelizAniversario2025':30,
-    'ShutUp': 20,
-    'Happy New Year': 50,
-}
+// const couponsObj = {
+//     'FelizAniversario2025':30,
+//     'ShutUp': 20,
+//     'Happy New Year': 50,
+// }
+
+const couponsList = [];
+couponsList.push({
+    nameCoupon: 'NuevoDescuento', 
+    discount: 45,
+})
 
 function calcularPrecioConDescuento(){
 
@@ -25,11 +31,25 @@ function calcularPrecioConDescuento(){
 
     let discount;
 
-    if(){
-
-    }else{
-
+    function isCouponInArray (couponElement){
+        return couponElement.nameCoupon == coupon;
     }
+
+    couponInArray = couponsList.find(isCouponInArray);
+
+    if(couponInArray){
+        discount = couponInArray.discount
+    }else{
+        pResult.innerHTML = 'El cupon ingresado <span style="color:#e0e6edce; color:rgba(224,230,237,.81); font-size:2.1rem;">NO ES VALIDO</span>';
+        return;
+    }
+
+    // if(couponsObj[coupon]){
+    //     discount = couponsObj[coupon]
+    // }else{
+    //     pResult.innerHTML = 'El cupon ingresado <span style="color:#e0e6edce; color:rgba(224,230,237,.81); font-size:2.1rem;">NO ES VALIDO</span>';
+    //     return;
+    // }
     
     // if(coupon == 'FelizAniversario2025'){
     //     discount = 30;
